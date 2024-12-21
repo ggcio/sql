@@ -1,3 +1,4 @@
+--CUSTOMER TABLE (Parent Table)
 INSERT INTO customer (cust_id, cust_firstname, cust_lastname, cust_gender, cust_age, cust_tel, cust_email, cust_address, no_of_visit) VALUES ('C0001', 'John',  'Smith', 'M', '35', '012-3456789', 'john.smith@gmail.com', '14, Lorong Masjid, George Town, Penang, 10050', '7');
 INSERT INTO customer (cust_id, cust_firstname, cust_lastname, cust_gender, cust_age, cust_tel, cust_email, cust_address, no_of_visit) VALUES ('C0002', 'Sarah', 'Johnson', 'F', '28', '016-2345678', 'sarah.johnson@hotmail.com', '7, Jalan Masjid Negeri, Jelutong, Penang, 11600', '7');
 INSERT INTO customer (cust_id, cust_firstname, cust_lastname, cust_gender, cust_age, cust_tel, cust_email, cust_address, no_of_visit) VALUES ('C0003', 'Emily', 'Davis', 'F', '19', '013-3456780', 'emily.davis@gmail.com', '38, Jalan Sungai Pinang, Gelugor, Penang, 11700', '2');
@@ -49,6 +50,7 @@ INSERT INTO customer (cust_id, cust_firstname, cust_lastname, cust_gender, cust_
 INSERT INTO customer (cust_id, cust_firstname, cust_lastname, cust_gender, cust_age, cust_tel, cust_email, cust_address, no_of_visit) VALUES ('C0049', 'Bertie', 'Benko', 'M', '28', '019-8743693', 'bertie.benko@gmail.com', '31, Jalan Tanjung Tokong, Tanjung Tokong, Penang, 10470', '4');
 INSERT INTO customer (cust_id, cust_firstname, cust_lastname, cust_gender, cust_age, cust_tel, cust_email, cust_address, no_of_visit) VALUES ('C0050', 'Cynde', 'Domeney', 'M', '16', '010-8127689', 'cynde.domeney@gmail.com', '12, Lorong Jelutong, Jelutong, Penang, 11600', '5');
 
+--OUTLET TABLE (Parent Table)
 INSERT INTO outlet (outlet_no, outlet_name, outlet_address, outlet_tel, outlet_email, outlet_start_time, outlet_end_time) VALUES ('T01', 'HairStory1', '24, Nagore Road, George Town, Penang, 10150', '012-3456789', 'hsnr10150@hairstory.com', '9:00 AM', '6:00 PM');
 INSERT INTO outlet (outlet_no, outlet_name, outlet_address, outlet_tel, outlet_email, outlet_start_time, outlet_end_time) VALUES ('T02', 'HairStory2', '67, Jalan Sultan Ahmad Shah, George Town, Penang, 10200', '013-9876543', 'hsjsas10200@hairstory.com', '10:00 AM', '7:00 PM');
 INSERT INTO outlet (outlet_no, outlet_name, outlet_address, outlet_tel, outlet_email, outlet_start_time, outlet_end_time) VALUES ('T03', 'HairStory3', '12, Jalan Bukit Jambul, 11900 Bayan Lepas, Penang', '014-2345678', 'hsjbj11900@hairstory.com', '9:00 AM', '6:00 PM');
@@ -60,6 +62,7 @@ INSERT INTO outlet (outlet_no, outlet_name, outlet_address, outlet_tel, outlet_e
 INSERT INTO outlet (outlet_no, outlet_name, outlet_address, outlet_tel, outlet_email, outlet_start_time, outlet_end_time) VALUES ('T09', 'HairStory9', '8, Jalan Tun Sardon, 11000 Balik Pulau, Penang', '016-1239876', 'hsjts11000@hairstory.com', '9:00 AM', '6:00 PM');
 INSERT INTO outlet (outlet_no, outlet_name, outlet_address, outlet_tel, outlet_email, outlet_start_time, outlet_end_time) VALUES ('T10', 'HairStory10', '3, Jalan Bukit Gambir, 11700 Minden, Penang', '019-9871234', 'hsjbg11700@hairstory.com', '10:00 AM', '7:00 PM');
 
+--SERVICE TABLE (Parent Table)
 INSERT INTO service (service_no, service_name, service_desc, service_price) VALUES ('S01', 'Haircut', 'Basic haircut and styling', 25);
 INSERT INTO service (service_no, service_name, service_desc, service_price) VALUES ('S02', 'Hair Wash', 'Professional shampoo and rinse', 15);
 INSERT INTO service (service_no, service_name, service_desc, service_price) VALUES ('S03', 'Hair Treatment', 'Restorative hair care for damaged hair', 50);
@@ -76,6 +79,7 @@ INSERT INTO service (service_no, service_name, service_desc, service_price) VALU
 INSERT INTO service (service_no, service_name, service_desc, service_price) VALUES ('S14', 'Beard Trim', 'Precision trimming and shaping', 20);
 INSERT INTO service (service_no, service_name, service_desc, service_price) VALUES ('S15', 'Hair Spa', 'Relaxing and nourishing hair and scalp therapy', 90);
 
+--STYLIST TABLE (Child Table)
 INSERT INTO stylist (stylist_id, stylist_name, stylist_gender, stylist_age, stylist_tel, stylist_role, outlet_id) VALUES ('ST001', 'Sterling Corey', 'F', '23', '011-1235678', 'Senior', 'T01');
 INSERT INTO stylist (stylist_id, stylist_name, stylist_gender, stylist_age, stylist_tel, stylist_role, outlet_id) VALUES ('ST002', 'Liliana Marcia', 'M', '32', '012-2346789', 'Senior', 'T06');
 INSERT INTO stylist (stylist_id, stylist_name, stylist_gender, stylist_age, stylist_tel, stylist_role, outlet_id) VALUES ('ST003', 'Tang Yeo Sih', 'M', '28', '019-3457890', 'Junior', 'T07');
@@ -177,6 +181,7 @@ INSERT INTO stylist (stylist_id, stylist_name, stylist_gender, stylist_age, styl
 INSERT INTO stylist (stylist_id, stylist_name, stylist_gender, stylist_age, stylist_tel, stylist_role, outlet_id) VALUES ('ST099', 'Haziq Dzarif', 'M', '32', '012-9015678', 'Senior', 'T08');
 INSERT INTO stylist (stylist_id, stylist_name, stylist_gender, stylist_age, stylist_tel, stylist_role, outlet_id) VALUES ('ST100', 'Sarah Imani', 'F', '28', '011-0126789', 'Junior', 'T08');
 
+--APPOINTMENT TABLE (Child Table)
 INSERT INTO appointment (apt_no, apt_date, apt_time, apt_status, cust_id) VALUES ('A0001', '01/01/2024', '9:10 PM', 'MISSED', 'C0019');
 INSERT INTO appointment (apt_no, apt_date, apt_time, apt_status, cust_id) VALUES ('A0002', '01/01/2024', '1:55 PM', 'COMPLETED', 'C0043');
 INSERT INTO appointment (apt_no, apt_date, apt_time, apt_status, cust_id) VALUES ('A0003', '03/01/2024', '3:26 PM', 'COMPLETED', 'C0025');
@@ -378,6 +383,7 @@ INSERT INTO appointment (apt_no, apt_date, apt_time, apt_status, cust_id) VALUES
 INSERT INTO appointment (apt_no, apt_date, apt_time, apt_status, cust_id) VALUES ('A0199', '22/12/2024', '2:01 PM', 'COMPLETED', 'C0016');
 INSERT INTO appointment (apt_no, apt_date, apt_time, apt_status, cust_id) VALUES ('A0200', '31/12/2024', '2:31 PM', 'COMPLETED', 'C0024');
 
+--PAYMENT TABLE (Child Table)
 INSERT INTO payment (payment_no, payment_method, payment_amount, payment_date, payment_status, payment_recipient_name, apt_no) VALUES ('P0001', 'ONLINE FPX', '130', '01/01/2024', 'COMPLETED', 'Lucas Green', 'A0001');
 INSERT INTO payment (payment_no, payment_method, payment_amount, payment_date, payment_status, payment_recipient_name, apt_no) VALUES ('P0002', 'DEBIT CARD', '165', '01/01/2024', 'COMPLETED', 'Isaac Bailey', 'A0002');
 INSERT INTO payment (payment_no, payment_method, payment_amount, payment_date, payment_status, payment_recipient_name, apt_no) VALUES ('P0003', 'ONLINE FPX', '70', '03/01/2024', 'COMPLETED', 'Jackson Perez', 'A0003');
@@ -579,6 +585,7 @@ INSERT INTO payment (payment_no, payment_method, payment_amount, payment_date, p
 INSERT INTO payment (payment_no, payment_method, payment_amount, payment_date, payment_status, payment_recipient_name, apt_no) VALUES ('P0199', 'CREDIT CARD', '135', '22/12/2024', 'COMPLETED', 'Isabella King', 'A0199');
 INSERT INTO payment (payment_no, payment_method, payment_amount, payment_date, payment_status, payment_recipient_name, apt_no) VALUES ('P0200', 'ONLINE FPX', '165', '31/12/2024', 'COMPLETED', 'Ella Mitchell', 'A0200');
 
+--APPOINTMENT_SERVICE TABLE (Assiociative Table)
 INSERT INTO appointment_service (apt_no, service_no, stylist_id) VALUES ('A0001', 'S01', 'ST030');
 INSERT INTO appointment_service (apt_no, service_no, stylist_id) VALUES ('A0001', 'S02', 'ST091');
 INSERT INTO appointment_service (apt_no, service_no, stylist_id) VALUES ('A0001', 'S06', 'ST041');
